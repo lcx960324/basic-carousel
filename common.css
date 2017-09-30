@@ -4,10 +4,12 @@
     height: 100px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 .container > .image-block {
     width: 200px;
     height: 100px;
+    left: -200px;
     background: red;
     position: absolute;
 }
