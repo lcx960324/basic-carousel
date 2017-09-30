@@ -1,0 +1,13 @@
+.container {
+    border: 1px solid #000;
+    width: 800px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+.container > .image-block {
+    width: 200px;
+    height: 100px;
+    background: red;
+    position: absolute;
+}
