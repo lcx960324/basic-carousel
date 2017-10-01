@@ -5,7 +5,9 @@ function carousel () {
     for(let i = -image.clientWidth; i < container.clientWidth; i++) {
         setTimeout(function () {
             image.style.left = i + 'px'
-        }, (i + image.clientWidth) * 2)
+            if (i === container.clientWidth - 1) carousel()
+        }, (i + image.clientWidth) * 4)
+        // if (i === container.clientWidth - 1) i = -image.clientWidth
+        console.log(123)
     }
 }
-carousel()
