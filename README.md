@@ -1,4 +1,4 @@
-# Basic Carousel
+# Basic Slider
 
 ## Steps
 
