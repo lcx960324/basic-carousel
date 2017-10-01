@@ -9,11 +9,22 @@
 </head>
 <body>
     <div class="container" id="carousel-container">
-        <div id="image" class="image-block"></div>            
+        <div class="image-block" style="background: red;"></div>
+        <div class="image-block" style="background: blue;"></div>
+        <div class="image-block" style="background: green;"></div>         
     </div>
     <script src="carousel.js"></script>
     <script>
-        window.onload = carousel
+        window.onload = function () {
+            const elements = document.getElementsByClassName('image-block')          
+            for (let i = 0; i < elements.length; i++) {
+                const duration = elements[i - 1] ? elements[i - 1].clientWidth * i * 4 : 0
+                console.log(duration)
+                setTimeout(function () {
+                    carousel(elements[i], 4)
+                }, duration)
+            }
+        }
     </script>
 </body>
 </html>

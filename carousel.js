@@ -1,13 +1,10 @@
-function carousel () {
+function carousel (image, duration) {
     const container = document.getElementById('carousel-container')
-    const image = document.getElementById('image')
-    console.log(container.clientWidth)
     for(let i = -image.clientWidth; i < container.clientWidth; i++) {
         setTimeout(function () {
             image.style.left = i + 'px'
-            if (i === container.clientWidth - 1) carousel()
-        }, (i + image.clientWidth) * 4)
+            if (i === container.clientWidth - 1) carousel(image, duration)
+        }, (i + image.clientWidth) * duration)
         // if (i === container.clientWidth - 1) i = -image.clientWidth
-        console.log(123)
     }
 }
