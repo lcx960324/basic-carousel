@@ -1,5 +1,4 @@
-function carousel (image, duration) {
-    const container = document.getElementById('carousel-container')
+function carousel (container, image, duration) {
     for(let i = -image.clientWidth; i < container.clientWidth; i++) {
         setTimeout(function () {
             image.style.left = i + 'px'
