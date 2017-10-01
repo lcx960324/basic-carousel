@@ -1,4 +1,4 @@
-# Carousel
+# Basic Carousel
 
 ## Steps
 
