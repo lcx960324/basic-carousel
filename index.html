@@ -10,16 +10,29 @@
 <body>
     <div class="container" id="carousel-container">
         <div class="image-blocks" id="image-blocks">
-            <div class="image-block" style="background: red;"></div>
+            <!-- <div class="image-block" style="background: red;"></div>
             <div class="image-block" style="background: blue;"></div>
-            <div class="image-block" style="background: green;"></div>
+            <div class="image-block" style="background: green;"></div> -->
         </div>
 
     </div>
     <script src="carousel.js"></script>
     <script>
+        function getRandomColor() {
+            return '#' + ('00000' + ((Math.random() * 16777215 + 0.5) >> 0).toString(16)).slice(-6)
+        }
         window.onload = function () {
-            carousel(document.getElementById('carousel-container'), document.getElementById('image-blocks'), 6)
+            const container = document.getElementById('carousel-container')
+            const images = document.getElementById('image-blocks')
+            const blocks = []
+            for (let i = 0; i < 3; i++) {
+                const el = document.createElement('div')
+                el.className = 'image-block'
+                el.style.background = getRandomColor()
+                console.log(el)
+                blocks.push(el)
+            }
+            carousel(container, images, 6, blocks)
         }
     </script>
 </body>
